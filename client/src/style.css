@@ -1,1 +1,90 @@
 *{box-sizing:border-box}body{margin:0;background:#f4f6fa;color:#18243a;font-family:Inter,system-ui,Arial,sans-serif}.layout{max-width:1050px;margin:0 auto;padding:45px 22px}h1{font-size:2.3rem;margin:8px 0}h2{font-size:1.2rem}.eyebrow{color:#5268cc;font-weight:800;letter-spacing:2px;font-size:12px}header{margin-bottom:30px}header p,.card p{color:#64748b}.panel,.card{background:white;border:1px solid #e2e8f0;border-radius:16px;padding:22px;box-shadow:0 5px 20px #18243a08}.panel{margin-bottom:28px}form{display:grid;gap:14px;max-width:580px}label{display:grid;gap:6px;font-weight:600;font-size:14px}input,textarea{font:inherit;padding:12px;border:1px solid #cbd5e1;border-radius:8px}button{width:max-content;background:#4259c9;color:white;border:0;border-radius:9px;padding:12px 20px;font-weight:700;cursor:pointer}button:disabled{opacity:.6}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.card h3{margin-top:0}.card small{color:#5268cc}.error{color:#b91c1c}
+
+/* Task list */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Task row */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+/* Task title */
+.task-title {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* Right-side actions */
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Status dropdown */
+.task-status {
+  width: 145px;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: white;
+  color: #334155;
+  font-size: 13px;
+}
+
+/* Delete button */
+.delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 16px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-actions {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .task-status {
+    flex: 1;
+  }
+}
